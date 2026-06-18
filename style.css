@@ -858,3 +858,126 @@ l{
   top: 70px;
   font-size: 10px;
   color: white;}
+/*FOOTER MEDIA QUERIES (Appended Code)
+Adjusts footer proportions for mobile screens in a "zoomed-in" layout.*/
+
+@media only screen and (max-width: 479px) {
+  /* Establish relative context so absolute elements stay inside the footer */
+  #info {
+    position: relative;
+    height: 500px;
+    text-align: center; /* Centers the logo inline */
+  }
+  
+  /* Reset alignment for the lists so they don't center */
+  #gettoknow, #help {
+    text-align: left;
+  }
+  /* centering the dropdown selectors */
+  #language {
+    top: 330px !important;
+    right: auto !important;
+    left: 50%;
+    transform: translateX(-50%) scale(1) !important;
+  }
+
+  #country-select {
+    top: 370px !important;
+    right: auto !important;
+    left: 50%;
+    transform: translateX(-50%) scale(1.05) !important;
+  }
+
+  /* Format copyright text to wrap gracefully within the screen */
+  #last {
+    top: 140px !important;
+    white-space: pre-wrap;
+    text-align: center;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    line-height: 1.5;
+  }
+}
+
+/*Tier 1 — Small Mobile (max-width 360px)*/
+@media only screen and (max-width: 360px) {
+  #footer { height: 40px; font-size: 13px; }
+  #gettoknow { width: 140px; height: 180px; }
+  #gettoknow pre { font-size: 12px; margin-left: -5px; }
+  #help { width: 170px; height: 260px; }
+  .gettoknow { font-size: 12px; }
+  l { font-size: 12px; left: 15px; }
+  #logo2 { transform: scale(0.8); }
+  #language { transform: translateX(-50%) scale(0.9) !important; }
+  #country-select { transform: translateX(-50%) scale(0.95) !important; }
+  #last { font-size: 9px; }
+}
+
+/*Tier 2 — Standard Mobile (361px - 413px)*/
+@media only screen and (min-width: 361px) and (max-width: 413px) {
+  #footer { height: 45px; font-size: 14px; }
+  #gettoknow { width: 160px; height: 190px; }
+  #gettoknow pre { font-size: 13px; margin-left: -5px; }
+  #help { width: 190px; height: 280px; }
+  .gettoknow { font-size: 13px; }
+  l { font-size: 13px; left: 20px; }
+  #logo2 { transform: scale(0.9); }
+  #last { font-size: 9.5px; }
+}
+/*TIER 3 — Large Mobile (414px - 479px)*/
+@media only screen and (min-width: 414px) and (max-width: 479px) {
+  #footer { height: 50px; font-size: 15px; }
+  #gettoknow { width: 180px; height: 200px; }
+  #gettoknow pre { font-size: 14px; }
+  #help { width: 210px; height: 300px; }
+  .gettoknow { font-size: 14px; }
+  l { font-size: 14px; left: 24px; }
+  #logo2 { transform: scale(1); }
+  #last { font-size: 10px; }
+}
+@media only screen and (max-width: 768px) {
+  /* 1. Allow the main footer containers to expand dynamically */
+  #footer, #info {
+    height: auto !important;
+    min-height: auto !important;
+  }
+  /* 2. Strip away the absolute positioning that throws elements off-screen */
+  #logo2, #language, #country-select, #last {
+    position: static !important; 
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+  }
+#logo2 {
+  display: block !important;
+  width: 100% !important; 
+  text-align: center !important;
+  margin: 30px 0 15px 0 !important;
+}
+#logo2 img {
+  margin: 0 !important; /* This kills the rogue 35px left margin */
+  display: inline-block !important;
+}
+  }
+  }
+  /* 4. Stack and center the Language and Country selectors */
+  #language, #country-select {
+    display: table !important; /* Shrinks to content width while keeping margin: auto intact */
+    margin: 15px auto !important; 
+  }
+  /* 5. Wrap and center the copyright text neatly at the bottom */
+  #last {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    padding: 20px 15px 40px 15px !important;
+    margin: 20px auto 0 auto !important;
+    white-space: normal !important; /* Allows long text to drop to the next line naturally */
+    line-height: 1.6 !important;
+  }
+}
