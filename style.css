@@ -284,15 +284,13 @@ x{
   height: 75px;
   right: 30px;}
 
-/* ===================================================================
-   MEDIA QUERY - Optimized for 360 x 800px screens (small mobile phones)
+/*Optimized for 360 x 800px screens
    Requires <meta name="viewport" content="width=device-width,
    initial-scale=1.0"> in the HTML head, otherwise the browser ignores
    real device width and this breakpoint will never match correctly.
    Every selector from the stylesheet above has a matching rule here.
    Existing rules above are untouched; these overrides keep the native,
-   "zoomed-in" app-like proportions instead of shrinking everything down.
-   =================================================================== */
+   "zoomed-in" app-like proportions instead of shrinking everything down.*/
 @media only screen and (max-width: 360px) {
 
   body{
@@ -963,7 +961,6 @@ Adjusts footer proportions for mobile screens in a "zoomed-in" layout.*/
   display: inline-block !important;
 }
   }
-  }
   /* 4. Stack and center the Language and Country selectors */
   #language, #country-select {
     display: table !important; /* Shrinks to content width while keeping margin: auto intact */
@@ -980,4 +977,3 @@ Adjusts footer proportions for mobile screens in a "zoomed-in" layout.*/
     white-space: normal !important; /* Allows long text to drop to the next line naturally */
     line-height: 1.6 !important;
   }
-}
