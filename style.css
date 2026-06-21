@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    border: border-box;
+}
+*{
+    font-family: Amazon Ember;
+}
+#upper{
+    height: 25vh;
+    width: 100%;
+    background-color: BLACK;
+    margin-top: 0;
+}
+#logo1{
+    height: 10vh;
+    width: 15vw;
+    position: relative;
+    top: 2vh;
+    left: 40px;
+}
+
+#menu{
+    position: absolute;
+    left: 10px;
+    height: 8vh;
+    color: white;
+    font-weight: bold;
+    top: 1vh;
+}
+.amazon-style-cart{
+    display: inline-block; 
+    color: white;
+    text-decoration: none;
+    height: 10vh;
+    width: 2vw;
+    position: absolute;
+    right: 3.5vh;
+    top: 3.5vh;
+}
+.amazon-style-profile{
+    display: inline-block; 
+    color: white;
+    text-decoration: none;
+    height: 10vh;
+    width: 2vw;
+    position: absolute;
+    right: 10vh;
+    top: 3.5vh;
+}
+#name{
+    position: absolute;
+    right: 15vh;
+    top: 4vh;
+    color: white;
+    text-decoration: none;
+    font-size: auto;
+}
+#searchbar{
+    display: inline-block;
+    position: absolute;
+    left: 20vw;
+    top: 3.4vh;
+    height: 5vh;
+    width: 63.5vw;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1.05rem;
+}
+#enter{
+    display: inline-block;
+    position: absolute;
+    left: 81vw;
+    top: 3.53vh;
+    height: 5.5vh;
+    width: 3vw;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: auto;
+    background-color: orange;
+}
